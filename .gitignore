@@ -1,1 +1,15 @@
+# Ignore a pasta .vscode
 .vscode/
+
+# Ignore arquivos de log
+*.log
+
+# Ignore arquivos de build
+build/
+dist/
+
+# Ignore dependências do Node.js
+node_modules/
+
+# Ignore arquivos de ambiente
+.env
