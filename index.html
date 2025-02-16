@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lista de compras</title>
+
+    <link rel="stylesheet" href="./src/css/base.css">
+    <link rel="stylesheet" href="./src/css/cabecalho.css">
+    <link rel="stylesheet" href="./src/css/conteudo.css">
+    <link rel="stylesheet" href="./src/css/rodape.css">
+
+    <script type="module" src="./src/js/app.js" defer></script>
+
+</head>
+
+<body>
+    <header class="cabecalho">
+        <nav class="cabecalho_nav">
+            <div class="cabecalho_titulo_container">
+                <img src="./assets/img/pedido-32.png" alt="Ícone de uma lista de compras.">
+                <h1 class="cabecalho_titulo">
+                    Lista de compras
+                </h1>
+            </div>
+
+            <button type="button" class="cabecalho_botao">
+                <img src="./assets/img/add-carrinho-32.png" alt="Ícone de um carrinho de compras"
+                    class="cabecalho_icone">
+            </button>
+        </nav>
+    </header>
+
+    <main class="conteudo">
+        <section class="secaoLista">
+            <ul class="lista_comprando">
+                
+            </ul>
+        </section>
+    </main>
+
+    <!-- Modal -->
+    <div id="modalCarrinho" class="modal">
+        <div class="modal-conteudo">
+            <span class="modal-fechar">&times;</span>
+            <h2>Adicionar Produto</h2>
+            <form id="formProduto">
+                <div class="campo-modal">
+                    <label>Nome do Produto:</label>
+                    <input type="text" id="nomeProduto" required>
+                </div>
+
+                <div class="campo-modal">
+                    <label>Quantidade:</label>
+                    <div class="quantidade-controle">
+                        <button type="button" class="btn-quantidade" data-acao="diminuir">-</button>
+                        <input type="number" id="quantidade" value="1" min="1" class="quantidade-input">
+                        <button type="button" class="btn-quantidade" data-acao="aumentar">+</button>
+                    </div>
+                </div>
+
+                <div class="campo-modal">
+                    <label>Preço Unitário (R$):</label>
+                    <input type="number" id="precoUnitario" step="0.01">
+                </div>
+
+                <button type="submit" class="btn-adicionar">Adicionar à Lista</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="rodape">
+        <button id="limparConcluidos">Limpar Comprados</button>
+        <p>Total: <span id="totalConcluido">R$ 0,00</span></p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+.cabecalho{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: var(--background-color);
+  box-shadow: 1px 1px 5px var(--shadow-color);
+  padding: 1.5rem 0;
+}
+
+.cabecalho_nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+}
+
+.cabecalho_titulo_container{
+  display: flex;
+  align-items: center;
+  gap: .25rem;
+}
+
+.cabecalho_titulo{
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+.cabecalho_botao{
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
